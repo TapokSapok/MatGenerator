@@ -1377,13 +1377,15 @@ function getName(length, letter, keyLetter) {
    } else {
       if (fin.length != 1) getName(length, letter, keyLetter);
    }
-
-   // console.log(arrMats)
-   // matOut.innerText = arrMats[getRandomInt(0, arrMats.length)]
 }
 
 btn.addEventListener('click', () => {
    getName(maxLengthInput.value, firstLetterInput.value, keyLetter.value)
 })
 
+firstLetterInput.oninput = (str) => {
+   if (firstLetterInput.value.length > 1) {
+      firstLetterInput.value = str.data
+   }
+}
 
