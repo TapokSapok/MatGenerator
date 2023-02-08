@@ -1356,7 +1356,7 @@ function getName(length, letter, keyLetter) {
    } else { stage2.push(...stage1); }
    if (keyLetter != '') {
       for (let i = 0; i < stage2.length; i++) {
-         if (stage2[i].includes(keyLetter)) {
+         if (stage2[i].includes(keyLetter.toLowerCase())) {
             stage3.push(stage2[i])
          }
       }
